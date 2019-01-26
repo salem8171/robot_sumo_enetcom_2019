@@ -6,13 +6,13 @@
 #define MOTOR_LEFT_PIN1 4
 #define MOTOR_LEFT_PIN2 5
 
-#define BLUETOOTH_RX 7
-#define BLUETOOTH_TX 8
+#define BLUETOOTH_RX 8
+#define BLUETOOTH_TX 9
 
-#define BLUETOOTH_CODE_UP '0'
-#define BLUETOOTH_CODE_DOWN '1'
-#define BLUETOOTH_CODE_RIGHT '2'
-#define BLUETOOTH_CODE_LEFT '3'
+#define BLUETOOTH_CODE_UP '4'
+#define BLUETOOTH_CODE_DOWN '5'
+#define BLUETOOTH_CODE_RIGHT '6'
+#define BLUETOOTH_CODE_LEFT '7'
 
 #define pmi(pin) pinMode(pin, INPUT)
 #define pmo(pin) pinMode(pin, OUTPUT)
@@ -27,10 +27,10 @@
 const char inversed_logic[20] = {
     not_inversed, // 0
     not_inversed, // 1
-    not_inversed, // 2
-    not_inversed, // 3
+    inversed, // 2
+    inversed, // 3
     not_inversed, // 4
-    not_inversed, // 5
+    inversed, // 5
     not_inversed, // 6
     not_inversed, // 7
     not_inversed, // 8
