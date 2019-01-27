@@ -30,16 +30,19 @@ void loop()
         return;
     }
     
-    switch (bluetooth.read())
+    Serial.println(bluetooth.peek());
+    int k;
+    do 
     {
-        case BLUETOOTH_CODE_UP: motor_controller.moveForward(); break;
-        case BLUETOOTH_CODE_DOWN: motor_controller.moveBackward(); break;
-        case BLUETOOTH_CODE_RIGHT: motor_controller.turnRight(); break;
-        case BLUETOOTH_CODE_LEFT: motor_controller.turnLeft(); break;
-        //default: motor_controller.stop(); return;
-    }
-    delay(50);
-    motor_controller.stop();    
+        delay(500);
+        k = bluetooth.read();
+        Serial.println("moving forward");
+        motor_controller.moveForward();
+    }while(k == BLUETOOTH_CODE_UP);
+    while(bluetooth.read() == BLUETOOTH_CODE_DOWN) motor_controller.moveBackward();
+    while(bluetooth.read() == BLUETOOTH_CODE_RIGHT) motor_controller.turnRight();
+    while(bluetooth.read() == BLUETOOTH_CODE_LEFT) motor_controller.turnLeft();
+    motor_controller.stop();   
 }
 // #include <SoftwareSerial.h>
 
