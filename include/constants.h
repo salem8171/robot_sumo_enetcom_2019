@@ -13,6 +13,7 @@
 #define BLUETOOTH_CODE_DOWN '5'
 #define BLUETOOTH_CODE_RIGHT '6'
 #define BLUETOOTH_CODE_LEFT '7'
+#define BLUETOOTH_CODE_STOP '0'
 
 #define pmi(pin) pinMode(pin, INPUT)
 #define pmo(pin) pinMode(pin, OUTPUT)
