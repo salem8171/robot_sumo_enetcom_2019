@@ -22,6 +22,20 @@ class MotorController
     public:
         Motor right_motor;
         Motor left_motor;
+
+        void moveForward();
+        void moveBackward();
+        void turnRight();
+        void turnLeft();
+        void stop();
+};
+
+class QuadMotorController
+{
+    public:
+        MotorController front_motors_controller;
+        MotorController rear_motors_controller;
+
         void moveForward();
         void moveBackward();
         void turnRight();
@@ -86,6 +100,36 @@ void MotorController::stop()
 {
     right_motor.stop();
     left_motor.stop();
+}
+
+void QuadMotorController::moveForward()
+{
+    front_motors_controller.moveForward();
+    rear_motors_controller.moveForward();
+}
+
+void QuadMotorController::moveBackward()
+{
+    front_motors_controller.moveBackward();
+    rear_motors_controller.moveBackward();
+}
+
+void QuadMotorController::turnRight()
+{
+    front_motors_controller.turnRight();
+    rear_motors_controller.turnRight();
+}
+
+void QuadMotorController::turnLeft()
+{
+    front_motors_controller.turnLeft();
+    rear_motors_controller.turnLeft();
+}
+
+void QuadMotorController::stop()
+{
+    front_motors_controller.stop();
+    rear_motors_controller.stop();
 }
 
 #endif

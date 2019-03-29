@@ -1,13 +1,25 @@
 #ifndef CONSTANTS
 #define CONSTANTS
 
-#define MOTOR_RIGHT_PIN1 2
-#define MOTOR_RIGHT_PIN2 3
-#define MOTOR_LEFT_PIN1 4
-#define MOTOR_LEFT_PIN2 5
+#define MOTOR_RIGHT_FRONT_PIN1 2
+#define MOTOR_RIGHT_FRONT_PIN2 3
 
-#define BLUETOOTH_RX 8
-#define BLUETOOTH_TX 9
+#define MOTOR_RIGHT_REAR_PIN1 6
+#define MOTOR_RIGHT_REAR_PIN2 4
+
+
+#define MOTOR_LEFT_FRONT_PIN1 9
+#define MOTOR_LEFT_FRONT_PIN2 7
+
+#define MOTOR_LEFT_REAR_PIN1 8
+#define MOTOR_LEFT_REAR_PIN2 5
+
+#define BLUETOOTH_STATE 14
+#define BLUETOOTH_RX 15
+#define BLUETOOTH_TX 16
+#define BLUETOOTH_GND 17
+#define BLUETOOTH_VCC 18
+#define BLUETOOTH_EN 19
 
 #define BLUETOOTH_CODE_UP '4'
 #define BLUETOOTH_CODE_DOWN '5'
@@ -30,12 +42,12 @@ const char inversed_logic[20] = {
     not_inversed, // 1
     inversed, // 2
     inversed, // 3
-    not_inversed, // 4
+    inversed, // 4
     inversed, // 5
-    not_inversed, // 6
-    not_inversed, // 7
-    not_inversed, // 8
-    not_inversed, // 9
+    inversed, // 6
+    inversed, // 7
+    inversed, // 8
+    inversed, // 9
     not_inversed, // 10
     not_inversed, // 11
     not_inversed, // 12
