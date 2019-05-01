@@ -1,10 +1,10 @@
 #ifndef CONSTANTS
 #define CONSTANTS
 
-#define MOTOR_RIGHT_PIN1 2
-#define MOTOR_RIGHT_PIN2 3
-#define MOTOR_LEFT_PIN1 4
-#define MOTOR_LEFT_PIN2 5
+#define MOTOR_RIGHT_PIN1 4
+#define MOTOR_RIGHT_PIN2 5
+#define MOTOR_LEFT_PIN1 2
+#define MOTOR_LEFT_PIN2 3
 
 #define MOTOR_ARM_PIN1 6
 #define MOTOR_ARM_PIN2 7
@@ -22,12 +22,12 @@
 const char inversed_logic[20] = {
     not_inversed, // 0
     not_inversed, // 1
-    not_inversed, // 2
-    not_inversed, // 3
-    not_inversed, // 4
-    not_inversed, // 5
-    not_inversed, // 6
-    not_inversed, // 7
+    inversed, // 2
+    inversed, // 3
+    inversed, // 4
+    inversed, // 5
+    inversed, // 6
+    inversed, // 7
     not_inversed, // 8
     not_inversed, // 9
     not_inversed, // 10

@@ -31,4 +31,5 @@ void loop()
     if (PSXdata.buttons & PSXBTN_CROSS) arm_motor.moveBackward();
     delay(10);
     motor_controller.stop();
+    arm_motor.stop();
 }
